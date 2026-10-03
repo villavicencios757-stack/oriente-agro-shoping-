@@ -1,0 +1,16 @@
+PASOS
+SUPABASE
+1. supabase.com > New project (guarda la contraseña de la base de datos).
+2. SQL Editor > New query > pega supabase/01_schema.sql > Run. (Crea tablas, permisos, categorías y el bucket "listings" público.)
+3. Authentication > Users > Add user > Create new user: tu correo y contraseña, con "Auto Confirm User" marcado.
+4. Authentication > Sign In / Providers > Email: desactiva "Confirm email" (para que el panel pueda crear empleados).
+5. SQL Editor > pega supabase/02_administrador.sql con TU correo > Run.
+6. Project Settings > API: copia Project URL y la Publishable/anon key.
+7. Si el paso 2 no creó el bucket: Storage > New bucket > nombre exacto "listings" > Public ON.
+APP
+8. Abre src/config.ts y pega URL, key y tu número de WhatsApp (ej. 59171234567).
+NETLIFY
+9. Prueba local (opcional): npm install, npm run dev.
+10. netlify.com > Add new site > Import from Git (o arrastra la carpeta si ya hiciste npm run build: carpeta dist).
+    Build command: npm run build · Publish directory: dist.
+11. Entra a tusitio/#/login con tu correo de administrador. Desde el Panel > usuarios creas empleados.
