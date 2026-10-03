@@ -117,3 +117,4 @@ let page:any;if(path.startsWith('/oferta/'))page=<Detail id={path.split('/')[2]}
 else if(path=='/login')page=<Login go={async()=>{await who();location.hash='/admin'}}/>;else if(path=='/admin')page=me&&me.role!='sin_acceso'?<Admin me={me} out={out}/>:<div className="wrap">Inicia sesión con una cuenta autorizada. <a href="#/login">Ingresar</a></div>;else page=<Home cats={cats}/>
 return <><header><a className="logo" href="#/">ORIENTE <span>AGRO</span> SHOPING</a><nav><a href="#/catalogo">Ofertas</a><a href="#/publicar">Vender</a><a href="#/interes">Quiero comprar</a><a href={me?'#/admin':'#/login'}>{me?'Panel':'Ingresar'}</a></nav></header>{page}
 <a className="wa" href={wa('Hola, quisiera información sobre Oriente Agro SHOPING.')} target="_blank">WhatsApp</a></>
+}
